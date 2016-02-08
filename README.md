@@ -52,7 +52,7 @@ When a message is received succesfully, the `must receive message` test should s
 Please use the `receive` function in [client.js](1) to receive any of your messages, else the tests might not succeed.
 
 ## Advanced: Customizing
-*There are **no** tests for the following*
+_There are **no** tests for the following_
 
 - By changing [index.html](3) and [chat.css](4), create a custom layout of which you think an application like this should look like.
 - Add a login for users where the can pick their own username and password and use to chat.
