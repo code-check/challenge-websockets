@@ -1,0 +1,14 @@
+﻿body {
+  width: 500px;
+  margin: 0 auto;
+}
+
+.client-container {
+  width: 100%;
+  display: inline-block;
+}
+
+.msg-container {
+  border: 1px solid #000;
+  margin: 1px;
+}

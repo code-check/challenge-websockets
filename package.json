@@ -1,0 +1,10 @@
+{
+  "devDependencies": {
+    "chai": "3.5.0",
+    "jsdom": "8.0.2"
+  },
+  "dependencies": {
+    "socket.io": "1.4.5",
+    "express": "4.13.4"
+  }
+}
