@@ -1,6 +1,8 @@
 ﻿{
   "editable": [
     "app.js",
+    "package.json",
+    "endpoint.json",
     "wwwroot/chat.css",
     "wwwroot/client.js",
     "wwwroot/index.html"
