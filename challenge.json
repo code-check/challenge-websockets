@@ -1,5 +1,6 @@
 ﻿{
   "editable": [
+    "app.js",
     "wwwroot/chat.css",
     "wwwroot/client.js",
     "wwwroot/index.html"
@@ -12,5 +13,6 @@
   "readme": {
     "en": "README.md"
   },
+  "allowNewFile": true,
   "test": "mocha specs"
 }

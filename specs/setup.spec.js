@@ -18,6 +18,7 @@ function Client1(done) {
             ProcessExternalResources: ["script"]
         },
         created: function (errors, window) {
+            if (errors) return;
             // Polyfills
             window.console.log = console.log;
             window.addEventListener("error", function (event) {
@@ -40,6 +41,7 @@ function Client2(done) {
             ProcessExternalResources: ["script"]
         },
         created: function (errors, window) {
+            if (errors) return;
             // Polyfills
             window.console.log = console.log;
             window.addEventListener("error", function (event) {
