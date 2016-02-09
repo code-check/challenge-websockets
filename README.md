@@ -5,24 +5,24 @@ You can use any possible framework for this as long as the tests will pass.
 ## Information
 
 - [chat.js](./wwwroot/chat.js)
-    > This script creates the page layout as well as the client.
-    > It is adviced to take a good look at this page to see how the HTML is generated.
+    - This script creates the page layout as well as the client.
+    - It is adviced to take a good look at this page to see how the HTML is generated.
 - [client.js][1]
-    > This script contain the code that creates a client.
-    > The `receive`, `send` and the `connect` function should not be removed and only their content should be modified.
-    > Though you are free to add extra functionality in this file.
+    - This script contain the code that creates a client.
+    - The `receive`, `send` and the `connect` function should not be removed and only their content should be modified.
+    - You are free to add extra functionality in this file.
 - [chat.css][4]
-    > This is the main stylesheet for this challange.
-    > You are free to add/remove things in this file.
+    - This is the main stylesheet for this challange.
+    - You are free to add/remove things in this file.
 - [index.html][3]
-    > This is the main page that should be displayed to the user when visiting.
-    > The url should be the same as in [endpoint.json][2]
+    - This is the main page that should be displayed to the user when visiting.
+    - The url should be the same as in [endpoint.json][2]
 - [endpoint.json][2]
-    > This the settings file containing the url your app should listen on.
-    > You are free host this outside this application, but you should alway provide the source code of your application.
+    - This the settings file containing the url your app should listen on.
+    - You are free host this outside this application, but you should alway provide the source code of your application.
 - [app.js](./app.js)
-    > The main NodeJS entry point of your application, this file will be run when starting tests.
-    > Please place your code within the `start` function.
+    - The main NodeJS entry point of your application, this file will be run when starting tests.
+    - Please place your code within the `start` function.
     
 Please make sure you application will be hosted on the url provided in [endpoint.json][2]. 
 
@@ -55,7 +55,6 @@ Please use the `receive` function in [client.js][1] to receive any of your messa
 _There are **no** tests for the following_
 
 - By changing [index.html][3] and [chat.css][4], create a custom layout of which you think an application like this should look like.
-- Add a login for users where the can pick their own username and password and use to chat.
 - Improve the security of the application against things such a [XSS](https://www.owasp.org/index.php/Cross-site_Scripting_%28XSS%29).
 
 [1]: ./wwwroot/client.js
