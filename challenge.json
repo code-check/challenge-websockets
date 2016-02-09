@@ -1,0 +1,16 @@
+﻿{
+  "editable": [
+    "wwwroot/chat.css",
+    "wwwroot/client.js",
+    "wwwroot/index.html"
+  ],
+  "excludes": [
+    "challenge.json",
+    ".gitignore",
+    ".gitattributes"
+  ],
+  "readme": {
+    "en": "README.md"
+  },
+  "test": "mocha specs"
+}
