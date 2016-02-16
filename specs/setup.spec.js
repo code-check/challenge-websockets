@@ -12,7 +12,7 @@ before(function (done) {
 
 function Client1(done) {
     jsdom.env({
-        url: endpoint,
+        url: endpoint.startsWith("http") ? endpoint : "http://" + endpoint,
         features: {
             FetchExternalResources: ["script"],
             ProcessExternalResources: ["script"]
@@ -35,7 +35,7 @@ function Client1(done) {
 
 function Client2(done) {
     jsdom.env({
-        url: endpoint,
+        url: endpoint.startsWith("http") ? endpoint : "http://" + endpoint,
         features: {
             FetchExternalResources: ["script"],
             ProcessExternalResources: ["script"]

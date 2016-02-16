@@ -17,4 +17,8 @@ describe("Check scripts", function () {
     it("must have the receive function defined", function () {
         assert.isFunction(global.window1.client.receive, "Please do not remove the receive function");
     });
+
+    it("must have the receive token defined", function () {
+        assert.isDefined(global.window1.client.token, "Please do not remove the token variable");
+    });
 });

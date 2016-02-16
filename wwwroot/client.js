@@ -1,5 +1,6 @@
 ﻿function Client() {
     this.id = 0;
+    this.token = "";
     this.connect = function connect() {
         // Code to connect a client here
         //BEGIN_CHALLENGE
@@ -21,7 +22,10 @@
         // Code to send data here
         //BEGIN_CHALLENGE
         if (data)
-            this.socket.emit("msg", data);
+            this.socket.emit("msg", {
+                token: this.token,
+                msg: data
+            });
         //END_CHALLENGE
     };
     this.receive = function receive(data) {

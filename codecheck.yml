@@ -1,3 +1,3 @@
 ﻿build:
 - npm install
-test: mocha specs
+test: mocha specs --recursive
