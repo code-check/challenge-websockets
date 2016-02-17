@@ -74,13 +74,17 @@
         var cId = ++id;
         socket.emit("id", ++cId);
         socket.on("msg", function (data) {
-            if (findAccount(data.token) === false)
-                return;
-
-            io.emit("msg", {
-                id: cId,
-                text: data.msg
-            });
+            if (findAccount(data.token) === false) {
+                socket.emit("msg", {
+                    id: cId,
+                    text: "[FAILED]" + data.msg
+                });
+            } else {
+                io.emit("msg", {
+                    id: cId,
+                    text: data.msg
+                });
+            }
         });
     });
 

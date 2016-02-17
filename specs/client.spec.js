@@ -14,6 +14,7 @@ describe("Client", function () {
         client1 = global.window1.client;
         client2 = global.window2.client;
         client1._receive = client1.receive;
+        client2._receive = client2.receive;
     });
 
     function rand64() {
@@ -35,9 +36,12 @@ describe("Client", function () {
 
     it("must not receive without login", function (done) {
         var message = rand64();
-        
-        client1.receive = function (data) {
-            client1._receive(data);
+
+        var once = true;
+        var check = function () {
+            if (!once) return;
+            once = false;
+
             var text = client1.$msgField.text();
             try {
                 assert.notInclude(text, message, "Message send by Client2 received by Client1 (without login)");
@@ -46,8 +50,17 @@ describe("Client", function () {
                 done(ex);
             }
         };
+
+        client1.receive = function (data) {
+            client1._receive(data);
+            check();
+        };
+        client2.receive = function (data) {
+            client2._receive(data);
+            setTimeout(check, 100);
+        };
         client2.send(message);
-        setTimeout(done, 1500);
+        setTimeout(check, 1500);
     });
 
     it("must receive with login", function (done) {

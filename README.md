@@ -42,6 +42,11 @@ For this purpose inside the client object we provided the following `this.$msgFi
 
 When done correctly, the `must have working receive` test will succeed.
 
+## Adding Login
+The next thing we have to do is to add a working login system to the application.
+
+For more information about the login system, read [Login.md](./Login.md).
+
 ## Sending Messages
 Another part that is important, is the ability to receive message on a second client, the simplest way of creating a new client is to open a second tab in your browser.
 
