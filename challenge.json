@@ -16,5 +16,9 @@
     "en": "README.md"
   },
   "allowNewFile": true,
-  "test": "mocha specs"
+  "test": "mocha specs",
+  "tags": [
+    "WebAPI",
+    "WebSockets"
+  ]
 }
