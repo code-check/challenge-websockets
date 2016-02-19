@@ -18,6 +18,7 @@
   "allowNewFile": true,
   "test": "mocha specs --recursive",
   "tags": [
+    "JavaScript",
     "WebAPI",
     "WebSockets"
   ]
